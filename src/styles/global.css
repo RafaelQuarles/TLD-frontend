@@ -1,0 +1,96 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  a {
+    @apply no-underline;
+  }
+
+  p,
+  a,
+  html,
+  body {
+    @apply text-gray-700;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-gray-900;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* Hero Styles  */
+.styleHero {
+  height: 95vh;
+}
+.styleBG {
+  z-index: -5;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.5);
+}
+.textBox {
+  padding: 4rem;
+  border-radius: 7rem;
+}
+.customButton {
+  background-color: rgb(250 198 19 / 0.1);
+}
+.customButton:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(250 198 19 / 0.3);
+}
+.styleWave {
+  z-index: -4;
+  position: absolute;
+  left: 0;
+  min-width: 1200px;
+  transform: translateY(-400px);
+}
+@media only screen and (max-width: 1200px) {
+  .styleWave {
+    transform: translateY(-350px);
+  }
+}
+.styleWave path {
+  display: block;
+  transform-origin: bottom;
+  fill: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .textBox {
+    background-color: rgb(0 0 0 / 0);
+    padding: 3rem 0;
+    border-radius: 1rem;
+  }
+  .styleBG {
+    filter: brightness(0.5);
+  }
+}
+
+/* Contact Styles */
+.contactContainer {
+  background-color: whitesmoke;
+}
